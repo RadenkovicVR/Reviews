@@ -14,12 +14,7 @@ const personImage = document.querySelector('.personImage');
 const personName = document.querySelector('.personName');
 const personJob = document.querySelector('.personJob');
 const personDescription = document.querySelector('.personDescription');
-
-// default
-personImage.src = 'images/susan.jpg';
-personName.textContent = 'Susan Smith';
-personJob.textContent = 'WEB DEVELOPER';
-personDescription.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni maxime rerum voluptatem at enim expedita veniam praesentium ut fugiat, sint doloribus consequatur neque ad voluptate a voluptatum voluptas itaque dicta?';
+const counter = document.querySelector('.counter');
 
 // buttons
 const buttons = document.querySelectorAll('.button');
@@ -27,6 +22,13 @@ const buttons = document.querySelectorAll('.button');
 //initial count
 const len = nameList.length;
 let count = 0;
+
+// default
+personImage.src = 'images/susan.jpg';
+personName.textContent = 'Susan Smith';
+personJob.textContent = 'WEB DEVELOPER';
+personDescription.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni maxime rerum voluptatem at enim expedita veniam praesentium ut fugiat, sint doloribus consequatur neque ad voluptate a voluptatum voluptas itaque dicta?';
+counter.textContent = count + 1 + '/' + len;
 
 // logic
 buttons.forEach(function (button){
@@ -42,6 +44,7 @@ buttons.forEach(function (button){
         }
         checkCount();
         setCount();
+        increaseCounter();
     })
 })
 
@@ -75,4 +78,8 @@ function checkRandom(){
     } else{
         count = random;
     }
+}
+
+function increaseCounter(){
+    counter.textContent = count + 1 + '/' + len;
 }
