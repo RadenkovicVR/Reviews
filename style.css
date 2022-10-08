@@ -41,6 +41,15 @@ body{
     margin: auto;
 }
 
+.counter{
+    position:absolute;
+    border: 1px solid black;
+    left: 180%;
+    top: 10%;
+    border: none;
+    font-size: 20pt;
+}
+
 .personImage{
     height: 150px;
     border-radius: 50%;
@@ -132,6 +141,30 @@ body{
     border: 2px solid black;
     color: black;
     cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+        height: 600px;
+    }
+
+    .personImage{
+        margin-top: 80px;
+    }
+
+    .personImage2{
+        margin-top: 80px;
+    }
+
+    .details {
+        margin-top: 30px;
+    }
+
+    .counter{
+        left: 135%;
+        font-size: 17pt;
+    }
 }
 
 
